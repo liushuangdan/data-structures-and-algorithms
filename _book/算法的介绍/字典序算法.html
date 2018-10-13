@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>字典序算法 | python 数据结构与算法</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../算法的介绍/布隆算法.html" />
+    
+    
+    <link rel="prev" href="../六大排序/快速排序.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.1"
+        data-chapter-title="字典序算法"
+        data-filepath="算法的介绍/字典序算法.md"
+        data-basepath=".."
+        data-revision="Fri Oct 12 2018 23:32:05 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        pythoon数据结构与算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> 剑指offer</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="剑指offer/补码.html">
+            
+                
+                    <a href="../剑指offer/补码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        补码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="剑指offer/剑指offer1-24题.html">
+            
+                
+                    <a href="../剑指offer/剑指offer1-24题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        剑指offer1-24题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="剑指offer/剑指offer25-43题.html">
+            
+                
+                    <a href="../剑指offer/剑指offer25-43题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        剑指offer25-43题
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="树的实现/树的定义.html">
+            
+                
+                    <a href="../树的实现/树的定义.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        各种树
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="树的实现/B-树.html">
+            
+                
+                    <a href="../树的实现/B-树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        B-树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="树的实现/B+树.html">
+            
+                
+                    <a href="../树的实现/B+树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        B+树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="树的实现/红黑树.html">
+            
+                
+                    <a href="../树的实现/红黑树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        红黑树
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> 六大排序</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="六大排序/六大基本排序.html">
+            
+                
+                    <a href="../六大排序/六大基本排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        六大基本排序
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="六大排序/快速排序.html">
+            
+                
+                    <a href="../六大排序/快速排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        快速排序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 算法的介绍</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1" data-path="算法的介绍/字典序算法.html">
+            
+                
+                    <a href="../算法的介绍/字典序算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        字典序算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="算法的介绍/布隆算法.html">
+            
+                
+                    <a href="../算法的介绍/布隆算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        布隆算法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >python 数据结构与算法</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="&#x7B97;&#x6CD5;&#x9898;&#x76EE;&#xFF1A;">&#x7B97;&#x6CD5;&#x9898;&#x76EE;&#xFF1A;</h2>
+<h6 id="&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x6C42;&#x51FA;&#x79BB;&#x8BE5;&#x6574;&#x6570;&#x6700;&#x8FD1;&#x7684;&#x5927;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x6362;&#x4F4D;&#x6570;&#x3002;">&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x6C42;&#x51FA;&#x79BB;&#x8BE5;&#x6574;&#x6570;&#x6700;&#x8FD1;&#x7684;&#x5927;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x201C;&#x6362;&#x4F4D;&#x6570;&#x201D;&#x3002;</h6>
+<p>&#x4EC0;&#x4E48;&#x662F;&#x6362;&#x4F4D;&#x6570;&#x5462;&#xFF1F;&#x5C31;&#x662F;&#x628A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5404;&#x4E2A;&#x6570;&#x4F4D;&#x7684;&#x6570;&#x5B57;&#x8FDB;&#x884C;&#x5168;&#x6392;&#x5217;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x65B0;&#x7684;&#x6574;&#x6570;&#x3002;&#x4F8B;&#x5982;53241&#x548C;23541&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x7ECF;&#x8FC7;&#x6362;&#x4F4D;&#x7684;&#x6574;&#x6570;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x79F0;&#x547C;&#xFF0C;&#x6240;&#x4EE5;&#x59D1;&#x4E14;&#x79F0;&#x5176;&#x4E3A;&#x201C;&#x6362;&#x4F4D;&#x6570;&#x201D;&#x3002;</p>
+<hr>
+<p>&#x9898;&#x76EE;&#x8981;&#x6C42;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x5BFB;&#x627E;&#x6700;&#x8FD1;&#x7684;&#x4E14;&#x5927;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x6362;&#x4F4D;&#x6570;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A; </p>
+<h5 id="&#x8F93;&#x5165;12345&#xFF0C;&#x8FD4;&#x56DE;12354">&#x8F93;&#x5165;12345&#xFF0C;&#x8FD4;&#x56DE;12354</h5>
+<h5 id="&#x8F93;&#x5165;12354&#xFF0C;&#x8FD4;&#x56DE;12435">&#x8F93;&#x5165;12354&#xFF0C;&#x8FD4;&#x56DE;12435</h5>
+<h5 id="&#x8F93;&#x5165;12435&#xFF0C;&#x8FD4;&#x56DE;12453">&#x8F93;&#x5165;12435&#xFF0C;&#x8FD4;&#x56DE;12453</h5>
+<hr>
+<h2 id="&#x601D;&#x8DEF;&#x5206;&#x6790;&#xFF1A;">&#x601D;&#x8DEF;&#x5206;&#x6790;&#xFF1A;</h2>
+<p>&#x5982;&#x679C;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x51E0;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x5E94;&#x8BE5;&#x662F; <code>&#x9006;&#x5E8F;</code> &#x60C5;&#x51B5;&#x4E0B;&#x6700;&#x5927;&#xFF0C; <code>&#x987A;&#x5E8F;</code> &#x60C5;&#x51B5;&#x4E0B;&#x6700;&#x5C0F;&#x3002;</p>
+<hr>
+<h5 id="&#x4E3E;&#x4E00;&#x4E2A;&#x6817;&#x5B50;&#xFF1A;">&#x4E3E;&#x4E00;&#x4E2A;&#x6817;&#x5B50;&#xFF1A;</h5>
+<p>&#x7ED9;&#x5B9A;1,2,3,4,5&#x8FD9;&#x51E0;&#x4E2A;&#x6570;&#x5B57;&#x3002;</p>
+<p>&#x6700;&#x5927;&#x7684;&#x7EC4;&#x5408;&#xFF1A;54321</p>
+<p>&#x6700;&#x5C0F;&#x7684;&#x7EC4;&#x5408;&#xFF1A;12345</p>
+<p>&#x987A;&#x5E8F;&#x548C;&#x9006;&#x5E8F;&#x662F;&#x4E24;&#x79CD;&#x6781;&#x7AEF;&#x7684;&#x7EC4;&#x5408;&#x3002;</p>
+<hr>
+<p>&#x6BD4;&#x5982;&#x7ED9;&#x5B9A;&#x6574;&#x6570;12354&#xFF0C;&#x5982;&#x4F55;&#x627E;&#x5230;&#x79BB;&#x5B83;&#x6700;&#x8FD1;&#x4E14;&#x5927;&#x4E8E;&#x5B83;&#x7684;&#x6362;&#x4F4D;&#x6570;&#x5462;&#xFF1F;</p>
+<p>&#x4E3A;&#x4E86;&#x548C;&#x539F;&#x6570;&#x63A5;&#x8FD1;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C3D;&#x91CF;&#x4FDD;&#x6301;<strong>&#x9AD8;&#x4F4D;&#x4E0D;&#x53D8;&#xFF0C;&#x4F4E;&#x4F4D;&#x5728;&#x6700;&#x5C0F;&#x7684;&#x8303;&#x56F4;&#x5185;&#x53D8;&#x6362;&#x987A;&#x5E8F;</strong>&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x7A76;&#x7ADF;&#x9700;&#x8981;&#x53D8;&#x6362;&#x591A;&#x5C11;&#x4F4D;&#x5462;&#xFF1F;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x5F53;&#x524D;&#x6574;&#x6570;&#x7684;<strong>&#x9006;&#x5E8F;&#x533A;&#x57DF;</strong>&#x3002;</p>
+<p><img src="images/&#x9006;&#x5E8F;1.png" alt="&#x9006;&#x5E8F;1"></p>
+<p>&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF0C;12354 &#x7684;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x662F;&#x6700;&#x540E;&#x4E24;&#x4F4D;&#xFF0C;&#x4EC5;&#x770B;&#x5230;&#x8FD9;&#x4E24;&#x4F4D;&#xFF0C;&#x5DF2;&#x7ECF;&#x662F;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5927;&#x7EC4;&#x5408;&#xFF0C;&#x82E5;&#x60F3;&#x6700;&#x63A5;&#x8FD1;&#x539F;&#x6570;&#xFF0C;&#x53C8;&#x6BD4;&#x539F;&#x6570;&#x66F4;&#x5927;&#xFF0C;&#x5FC5;&#x987B;&#x4ECE;<strong>&#x5012;&#x6570;&#x7B2C;3&#x4F4D;</strong>&#x5F00;&#x59CB;&#x6539;&#x53D8;&#x3002;</p>
+<p>&#x600E;&#x6837;&#x6539;&#x53D8;&#x5462;&#xFF1F;12345 &#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E09;&#x4F4D;&#x662F;3&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4ECE;&#x540E;&#x9762;&#x7684;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x4E2D;&#x5BFB;&#x627E;&#x5230;&#x521A;&#x521A;&#x5927;&#x4E8E;3&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x548C;3&#x7684;&#x4F4D;&#x7F6E;&#x8FDB;&#x884C;&#x4E92;&#x6362;&#xFF1A;</p>
+<p><img src="images/&#x9006;&#x5E8F;2.png" alt="&#x9006;&#x5E8F;1"></p>
+<p>&#x4E92;&#x6362;&#x540E;&#x7684;&#x4E34;&#x65F6;&#x7ED3;&#x679C;&#x662F;12453&#xFF0C;&#x5012;&#x6570;&#x7B2C;3&#x4F4D;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x6700;&#x540E;&#x4E24;&#x4F4D;&#x4ECD;&#x7136;&#x662F;&#x9006;&#x5E8F;&#x72B6;&#x6001;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x6700;&#x540E;&#x4E24;&#x4F4D;<strong>&#x8F6C;&#x53D8;&#x56DE;&#x987A;&#x5E8F;</strong>&#xFF0C;&#x4EE5;&#x6B64;&#x4FDD;&#x8BC1;&#x5728;&#x5012;&#x6570;&#x7B2C;3&#x4F4D;&#x6570;&#x503C;&#x4E3A;4&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x540E;&#x4E24;&#x4F4D;&#x5C3D;&#x53EF;&#x80FD;&#x5C0F;&#xFF1A;</p>
+<p><img src="images/&#x9006;&#x5E8F;3.png" alt="&#x9006;&#x5E8F;1"></p>
+<p>&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;12435&#x3002;</p>
+<hr>
+<h2 id="&#x603B;&#x7ED3;&#xFF1A;">&#x603B;&#x7ED3;&#xFF1A;</h2>
+<h4 id="&#x83B7;&#x53D6;&#x6700;&#x8FD1;&#x6362;&#x4F4D;&#x6570;&#x7684;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;">&#x83B7;&#x53D6;&#x6700;&#x8FD1;&#x6362;&#x4F4D;&#x6570;&#x7684;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</h4>
+<ol>
+<li><p>&#x4ECE;&#x540E;&#x5411;&#x524D;&#x67E5;&#x770B;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#xFF0C;&#x627E;&#x5230;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x7684;&#x524D;&#x4E00;&#x4F4D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6570;&#x5B57;&#x7F6E;&#x6362;&#x7684;&#x8FB9;&#x754C;</p>
+</li>
+<li><p>&#x628A;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x7684;&#x524D;&#x4E00;&#x4F4D;&#x548C;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x4E2D;&#x521A;&#x521A;&#x5927;&#x4E8E;&#x5B83;&#x7684;&#x6570;&#x5B57;&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;</p>
+</li>
+<li><p>&#x628A;&#x539F;&#x6765;&#x7684;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x8F6C;&#x4E3A;&#x987A;&#x5E8F;&#x3002;</p>
+</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x89E3;&#x6CD5;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5927;&#x4E0A;&#x7684;&#x540D;&#x5B57;&#xFF1A;&#x5B57;&#x5178;&#x5E8F;&#x7B97;&#x6CD5;&#xFF0C;&#x4ECE;&#x5DE6;&#x5F80;&#x53F3;&#x4F9D;&#x6B21;&#x589E;&#x5927;&#xFF0C;&#x5BF9;&#x8FD9;&#x5C31;&#x662F;&#x5B57;&#x5178;&#x5E8F;&#x6CD5;&#x3002;</p>
+<hr>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding: UTF-8 -*-</span>
+<span class="hljs-keyword">import</span> copy
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">findTransferPoint</span><span class="hljs-params">(numbers)</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(numbers)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):           <span class="hljs-comment">#&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x67E5;&#x627E;&#xFF0C;&#x627E;&#x5230;&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x7684;&#x524D;&#x4E00;&#x4F4D;</span>
+        <span class="hljs-keyword">if</span> numbers[i]&gt;numbers[i-<span class="hljs-number">1</span>]:
+            <span class="hljs-keyword">return</span> i
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>                                        <span class="hljs-comment">#&#x9006;&#x5E8F;&#x8FD4;&#x56DE;0</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">exchangeHead</span><span class="hljs-params">(numbers,index)</span>:</span>
+    head=numbers[index-<span class="hljs-number">1</span>]
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(numbers)-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>,-<span class="hljs-number">1</span>):
+        <span class="hljs-keyword">if</span> head&lt;numbers[i]:
+            numbers[index - <span class="hljs-number">1</span>] = numbers[i]
+            numbers[i] = head
+            <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">return</span> numbers
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reverse</span><span class="hljs-params">(num,index)</span>:</span>
+    a = len(num)
+    <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> range(index, a):
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(k+ <span class="hljs-number">1</span>, a):
+            <span class="hljs-keyword">if</span> num[k] &gt; num[j]:
+                num[k], num[j] = num[j], num[k]
+    <span class="hljs-keyword">return</span> num
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">()</span>:</span>                                              <span class="hljs-comment">#&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;</span>
+    numbers = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>]
+    index=findTransferPoint(numbers)                    <span class="hljs-comment">#&#x627E;&#x5230;&#x4EA4;&#x6362;&#x7684;&#x70B9;</span>
+    <span class="hljs-keyword">if</span> index:
+        num=exchangeHead(numbers,index)                 <span class="hljs-comment">#&#x4EA4;&#x6362;</span>
+        a=reverse(num,index)                            <span class="hljs-comment">#&#x9006;&#x5E8F;&#x533A;&#x57DF;&#x8F6C;&#x5316;&#x6210;&#x6709;&#x5E8F;</span>
+        <span class="hljs-keyword">print</span> a
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">print</span><span class="hljs-string">&quot;&#x6CA1;&#x6709;&#x66F4;&#x5927;&#x7684;&#x6362;&#x4F4D;&#x6570;&quot;</span>
+
+run()
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../六大排序/快速排序.html" class="navigation navigation-prev " aria-label="Previous page: 快速排序"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../算法的介绍/布隆算法.html" class="navigation navigation-next " aria-label="Next page: 布隆算法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>六大基本排序 | python 数据结构与算法</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../六大排序/快速排序.html" />
+    
+    
+    <link rel="prev" href="../树的实现/红黑树.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.1"
+        data-chapter-title="六大基本排序"
+        data-filepath="六大排序/六大基本排序.md"
+        data-basepath=".."
+        data-revision="Fri Oct 12 2018 23:32:05 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        pythoon数据结构与算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> 剑指offer</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="剑指offer/补码.html">
+            
+                
+                    <a href="../剑指offer/补码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        补码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="剑指offer/剑指offer1-24题.html">
+            
+                
+                    <a href="../剑指offer/剑指offer1-24题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        剑指offer1-24题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="剑指offer/剑指offer25-43题.html">
+            
+                
+                    <a href="../剑指offer/剑指offer25-43题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        剑指offer25-43题
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="树的实现/树的定义.html">
+            
+                
+                    <a href="../树的实现/树的定义.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        各种树
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="树的实现/B-树.html">
+            
+                
+                    <a href="../树的实现/B-树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        B-树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="树的实现/B+树.html">
+            
+                
+                    <a href="../树的实现/B+树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        B+树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="树的实现/红黑树.html">
+            
+                
+                    <a href="../树的实现/红黑树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        红黑树
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> 六大排序</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.1" data-path="六大排序/六大基本排序.html">
+            
+                
+                    <a href="../六大排序/六大基本排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        六大基本排序
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="六大排序/快速排序.html">
+            
+                
+                    <a href="../六大排序/快速排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        快速排序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 算法的介绍</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="算法的介绍/字典序算法.html">
+            
+                
+                    <a href="../算法的介绍/字典序算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        字典序算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="算法的介绍/布隆算法.html">
+            
+                
+                    <a href="../算法的介绍/布隆算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        布隆算法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >python 数据结构与算法</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p>1.&#x5192;&#x6CE1;&#x6392;&#x5E8F;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># 2 &#x5192;&#x6CE1;&#x6392;&#x5E8F;&#xFF1A;&#x5B83;&#x91CD;&#x590D;&#x7684;&#x8D70;&#x8BBF;&#x8FC7;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x5217;&#xFF0C;&#x4E00;&#x6B21;&#x6BD4;&#x8F83;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x4ED6;&#x4EEC;&#x7684;&#x987A;&#x5E8F;&#x9519;&#x8BEF;&#x5C31;&#x628A;&#x4ED6;&#x4EEC;&#x4EA4;&#x6362;&#x8FC7;&#x6765;&#xFF0C;&#x8D70;&#x8BBF;&#x6570;&#x5217;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#x91CD;&#x590D;&#x7684;&#x6267;&#x884C;&#x5230;&#x6CA1;&#x6709;&#x518D;&#x9700;&#x8981;&#x4EA4;&#x6362;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8BE5;&#x6570;&#x5217;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x6392;&#x5E8F;&#x3002;</span>
+<span class="hljs-comment">#&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n^2)</span>
+<span class="hljs-comment">#&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(1)</span>
+<span class="hljs-comment">#&#x7A33;&#x5B9A;&#x6027;&#xFF1A;&#x7A33;&#x5B9A;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bubble_sort</span><span class="hljs-params">(blist)</span>:</span>
+    count = len(blist)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>,count):
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i+<span class="hljs-number">1</span>,count):
+            <span class="hljs-keyword">if</span> blist[i] &gt; blist[j]:
+                blist[i],blist[j] = blist[j],blist[i]
+    <span class="hljs-keyword">return</span> blist
+
+print(bubble_sort([<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>]))
+</code></pre>
+<hr>
+<h2 id="2&#x63D2;&#x5165;&#x6392;&#x5E8F;">2.&#x63D2;&#x5165;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-python"><span class="hljs-comment">#1 &#x63D2;&#x5165;&#x6392;&#x5E8F;:&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x5C31;&#x662F;&#x5C06;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x63D2;&#x5165;&#x5230;&#x5DF2;&#x7ECF;&#x6392;&#x597D;&#x5E8F;&#x7684;&#x6709;&#x5E8F;&#x6570;&#x636E;&#x4E2D;&#xFF0C;&#x4ECE;&#x800C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#xFF0C;&#x4E2A;&#x6570;&#x52A0;1 &#x7684;&#x6709;&#x5E8F;&#x6570;&#x636E;&#xFF0C;&#x7B97;&#x6CD5;&#x7528;&#x4E8E;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x7684;&#x6392;&#x5E8F;&#xFF0C;&#x9996;&#x5148;&#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;&#x5DF2;&#x7ECF;&#x6392;&#x597D;&#x5E8F;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x6BCF;&#x6B21;&#x4ECE;&#x540E;&#x7684;&#x53D6;&#x51FA;&#x63D2;&#x5165;&#x5230;&#x524D;&#x9762;&#x5E76;&#x6392;&#x5E8F;&#x3002;</span>
+<span class="hljs-comment">#&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n^2)</span>
+<span class="hljs-comment">#&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(1)</span>
+<span class="hljs-comment">#&#x7A33;&#x5B9A;&#x6027;&#xFF1A;&#x7A33;&#x5B9A;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert_sort</span><span class="hljs-params">(ilist)</span>:</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(ilist)):
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i):
+            <span class="hljs-keyword">if</span> ilist[i] &lt; ilist[j]:
+                ilist.insert(j,ilist.pop(i))
+                <span class="hljs-keyword">break</span>
+    <span class="hljs-keyword">return</span> ilist
+
+print(insert_sort([<span class="hljs-number">4</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">8</span>,<span class="hljs-number">0</span>]))
+</code></pre>
+<hr>
+<h2 id="3&#x9009;&#x62E9;&#x6392;&#x5E8F;">3.&#x9009;&#x62E9;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-python"><span class="hljs-comment">#3 &#x9009;&#x62E9;&#x6392;&#x5E8F; &#xFF1A; &#x7B2C;&#x4E00;&#x8D9F;&#xFF0C;&#x5728;&#x5F85;&#x6392;&#x5E8F;&#x8BB0;&#x5F55;r1 &#x3002;&#x3002;&#x3002;r(n)&#x4E2D;&#x9009;&#x51FA;&#x6700;&#x5C0F;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x5C06;&#x5B83;&#x4E0E;r1 &#x4EA4;&#x6362;&#xFF0C;&#x7B2C;&#x4E8C;&#x8D9F;&#xFF0C;&#x5728;&#x5F85;&#x6392;&#x5E8F;&#x8BB0;&#x5F55;r2 ~ r(n) &#x4E2D;&#x9009;&#x51FA;&#x6700;&#x5C0F;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x5C06;&#x5B83;&#x4E0E; r2 &#x4EA4;&#x6362;&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x7B2C;i&#x8D9F;&#x5728;&#x5F85;&#x6392;&#x5E8F;&#x8BB0;&#x5F55; r[i]~r[n]&#x4E2D;&#x9009;&#x51FA;&#x6700;&#x5C0F;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x5C06;&#x5B83;&#x4E0E;r[i]&#x4EA4;&#x6362;&#xFF0C;&#x4F7F;&#x6709;&#x5E8F;&#x5E8F;&#x5217;&#x4E0D;&#x65AD;&#x589E;&#x957F;&#x76F4;&#x5230;&#x5168;&#x90E8;&#x6392;&#x5E8F;&#x5B8C;&#x6BD5;&#x3002;</span>
+
+<span class="hljs-comment">#&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n^2)</span>
+<span class="hljs-comment">#&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(1)</span>
+<span class="hljs-comment">#&#x7A33;&#x5B9A;&#x6027;&#xFF1A;&#x4E0D;&#x7A33;&#x5B9A;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">select_sort</span><span class="hljs-params">(slist)</span>:</span>
+    <span class="hljs-comment">#&#x5916;&#x5C42;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#x6B21;&#x6570;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(slist)):
+        <span class="hljs-comment">#&#x5047;&#x8BBE;&#x627E;&#x5230;&#x7684;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x4E0B;&#x6807;&#x4E3A;j</span>
+        x = i
+        <span class="hljs-comment">#&#x5BFB;&#x627E;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x7684;&#x8FC7;&#x7A0B;</span>
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(i,len(slist)):
+            <span class="hljs-comment">#&#x5047;&#x8BBE;&#x6700;&#x5C0F;&#x4E0B;&#x6807;&#x7684;&#x503C;&#xFF0C;&#x5927;&#x4E8E;&#x5FAA;&#x73AF;&#x4E2D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x6539;&#x53D8;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x4E0B;&#x6807;</span>
+            <span class="hljs-keyword">if</span> slist[j] &lt; slist[x]:
+                x = j
+        <span class="hljs-comment">#&#x5FAA;&#x73AF;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x5047;&#x8BBE;&#x628A;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x4E0B;&#x6807;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF; x</span>
+        <span class="hljs-comment"># &#x5728;&#x4E0D;&#x505C;&#x7684;&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x4E0D;&#x505C;&#x7684;&#x4EA4;&#x6362;&#x4E24;&#x4E2A;&#x4E0D;&#x4E00;&#x6837;&#x5927;&#x5C0F;&#x7684;&#x503C;</span>
+        slist[i],slist[x] = slist[x],slist[i]
+    <span class="hljs-comment">#&#x8FD4;&#x56DE; &#x6392;&#x597D;&#x5E8F;&#x7684;&#x5217;&#x8868;</span>
+    <span class="hljs-keyword">return</span> slist
+
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    arrayList = [<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">6</span>,<span class="hljs-number">9</span>,<span class="hljs-number">8</span>]
+    select_sort(arrayList)
+    print(arrayList)
+</code></pre>
+<hr>
+<h2 id="4&#x5E0C;&#x5C14;&#x6392;&#x5E8F;">4.&#x5E0C;&#x5C14;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-python"><span class="hljs-comment">#4 &#x5E0C;&#x5C14;&#x6392;&#x5E8F; &#xFF1A; &#x5E0C;&#x5C14;&#x6392;&#x5E8F; &#x662F;&#x628A;&#x8BB0;&#x5F55;&#x6309;&#x4E0B;&#x6807;&#x7684;&#x4E00;&#x5B9A;&#x589E;&#x91CF;&#x5206;&#x7EC4;&#xFF0C;&#x5BF9;&#x6BCF;&#x7EC4;&#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x6392;&#x5E8F;&#xFF1B;&#x968F;&#x7740;&#x589E;&#x91CF;&#x9010;&#x6E10;&#x51CF;&#x5C11;&#xFF0C;&#x6BCF;&#x7EC4;&#x5305;&#x542B;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x5F53;&#x589E;&#x91CF;&#x51CF;&#x81F3;1&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x6070;&#x597D;&#x88AB;&#x5206;&#x6210;&#x4E00;&#x7EC4;&#xFF0C;&#x7B97;&#x6CD5;&#x7EC8;&#x6B62;</span>
+
+<span class="hljs-comment">#&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; O(n^2)</span>
+<span class="hljs-comment">#&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(nlogn)</span>
+<span class="hljs-comment">#&#x7A33;&#x5B9A;&#x6027;&#xFF1A;&#x4E0D;&#x7A33;&#x5B9A;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">shell_sort</span><span class="hljs-params">(slist)</span>:</span>
+    count = len(slist)
+    step = <span class="hljs-number">2</span>
+    group = count // step
+    <span class="hljs-keyword">while</span> group&gt;<span class="hljs-number">0</span>:
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(group):
+            j = i + group
+            <span class="hljs-keyword">while</span> j &lt; count:
+                key = slist[j]
+                k = j - group
+                <span class="hljs-keyword">while</span> k &gt;= <span class="hljs-number">0</span>:
+                    <span class="hljs-keyword">if</span> slist[k] &gt; key:
+                        slist[k+group] = slist[k]
+                        slist[k] = key
+                    k = k - group
+                j = j + group
+        group = group // step
+    <span class="hljs-keyword">return</span> slist
+
+<span class="hljs-comment"># print(shell_sort([4,5,7,3,2,6,9,8,0]))</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ShellSort</span><span class="hljs-params">(arrList)</span>:</span>
+    arrayLen = len(arrList)
+    h = <span class="hljs-number">1</span>
+    <span class="hljs-keyword">while</span> h &lt; arrayLen//<span class="hljs-number">3</span>:
+        h = h * <span class="hljs-number">3</span> + <span class="hljs-number">1</span>
+        <span class="hljs-comment">#&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x540E;&#x4E00;&#x4E2A;&#x6BD4;&#x524D;&#x4E00;&#x4E2A;&#x8981;&#x5C0F;</span>
+        <span class="hljs-comment">#&#x5982;&#x679C;&#x662F;&#x5219;&#x4EA4;&#x6362;</span>
+    <span class="hljs-keyword">while</span> h &gt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(h,arrayLen):
+            j = i
+            <span class="hljs-keyword">while</span> j &gt;= h <span class="hljs-keyword">and</span> arrList[j] &lt; arrList[j-h]:
+                arrList[j] ,arrList[j-h] = arrList[j-h],arrList[j]
+                j -= h
+        h  //= <span class="hljs-number">3</span>
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    arrList = [<span class="hljs-number">14</span>,<span class="hljs-number">33</span>,<span class="hljs-number">27</span>,<span class="hljs-number">10</span>,<span class="hljs-number">35</span>,<span class="hljs-number">19</span>,<span class="hljs-number">42</span>,<span class="hljs-number">44</span>]
+    ShellSort(arrList)
+    print(arrList)
+</code></pre>
+<hr>
+<h2 id="5&#x5F52;&#x5E76;&#x6392;&#x5E8F;">5.&#x5F52;&#x5E76;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-python"><span class="hljs-comment">#      &#x5F53;n&#x8F83;&#x5927;&#xFF0C;&#x5219;&#x5E94;&#x91C7;&#x7528;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(nlog2n)&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x6CD5;&#xFF1A;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x3001;&#x5806;&#x6392;&#x5E8F;&#x6216;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x5E8F;&#x3002;</span>
+
+<span class="hljs-string">&quot;&quot;&quot;
+&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#xFF1A;&#x91C7;&#x7528;&#x5206;&#x6CBB;&#x6CD5;&#xFF08;Divide and Conquer&#xFF09;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5178;&#x578B;&#x7684;&#x5E94;&#x7528;&#x3002;&#x5C06;&#x5DF2;&#x6709;&#x5E8F;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x5408;&#x5E76;&#xFF0C;&#x5F97;&#x5230;&#x5B8C;&#x5168;&#x6709;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#xFF1B;&#x5373;&#x5148;&#x4F7F;&#x6BCF;&#x4E2A;&#x5B50;&#x5E8F;&#x5217;&#x6709;&#x5E8F;&#xFF0C;&#x518D;&#x4F7F;&#x5B50;&#x5E8F;&#x5217;&#x6BB5;&#x95F4;&#x6709;&#x5E8F;&#x3002;&#x82E5;&#x5C06;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x8868;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x8868;&#xFF0C;&#x79F0;&#x4E3A;&#x4E8C;&#x8DEF;&#x5F52;&#x5E76;
+
+&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(nlog&#x2082;n)
+&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(1)
+&#x7A33;&#x5B9A;&#x6027;&#xFF1A;&#x7A33;&#x5B9A;
+
+&quot;&quot;&quot;</span>
+
+<span class="hljs-comment"># &#x5F52;&#x5E76;&#x6392;&#x5E8F; Merge_Sort</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">MergeSort</span><span class="hljs-params">(arrayList)</span>:</span>
+    arrayLen = len(arrayList)
+    <span class="hljs-comment">#&#x5224;&#x65AD;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x7684;&#x6B63;&#x786E;&#x6027;,&#x5982;&#x679C;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;1&#xFF0C;&#x5C31;&#x8BF4;&#x660E;&#x4E3A;1</span>
+    <span class="hljs-keyword">if</span> arrayLen &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> arrayList
+    midIndex = arrayLen//<span class="hljs-number">2</span>
+    <span class="hljs-comment">#&#x5DE6;&#x8FB9;&#x7684;&#x90E8;&#x5206;&#x53BB;&#x505A; MergeSort</span>
+    leftArray = MergeSort(arrayList[:midIndex])
+    <span class="hljs-comment">#&#x53F3;&#x8FB9;&#x7684;&#x53BB;&#x505A; MergeSort</span>
+    rightArray = MergeSort(arrayList[midIndex:])
+    <span class="hljs-comment">#&#x5C06;&#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x5408;&#x5E76;&#xFF0C;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x5E76;&#x5DF2;&#x7ECF;&#x6392;&#x5E8F;&#x6210;&#x529F;</span>
+    retArray = MergeCore(leftArray,rightArray)
+    <span class="hljs-keyword">return</span> retArray
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">MergeCore</span><span class="hljs-params">(leftArray,rightArray)</span>:</span>
+    <span class="hljs-comment">#&#x9996;&#x5148;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x6307;&#x9488;,&#x8FD9;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x5206;&#x522B;&#x6307;&#x5411;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</span>
+    leftIndex = <span class="hljs-number">0</span>
+    rightIndex = <span class="hljs-number">0</span>
+    <span class="hljs-comment">#&#x83B7;&#x53D6;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x51FA;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x7684;&#x8FB9;&#x754C;&#x662F;&#x4EC0;&#x4E48;</span>
+    leftLen = len(leftArray)
+    rightLen = len(rightArray)
+    <span class="hljs-comment">#&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x5217;&#x8868;,&#x8FD9;&#x4E00;&#x6B65;&#x5C31;&#x4EE3;&#x8868;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x81F3;&#x5C11;&#x662F; O(n)</span>
+    retList = []
+    <span class="hljs-comment">#&#x5FAA;&#x73AF;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#x5BFB;&#x627E;&#x6700;&#x5C0F;&#x503C;&#x52A0;&#x5165;&#x5230;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x6570;&#x7EC4;&#x4E2D;</span>
+    <span class="hljs-keyword">while</span> leftIndex &lt; leftLen <span class="hljs-keyword">and</span> rightIndex &lt; rightLen:
+        <span class="hljs-keyword">if</span> leftArray[leftIndex] &lt; rightArray[rightIndex]:
+            retList.append(leftArray[leftIndex])
+            leftIndex += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">else</span>:
+            retList.append(rightArray[rightIndex])
+            rightIndex += <span class="hljs-number">1</span>
+    <span class="hljs-comment">#&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x5C06;&#x5269;&#x4F59;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x5185;&#x5BB9;&#x653E;&#x7F6E;&#x5728;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E2D;</span>
+    retList.extend(leftArray[leftIndex:])
+
+    <span class="hljs-comment"># while leftIndex &lt; leftLen:</span>
+    <span class="hljs-comment">#     retList.append(leftArray[leftIndex])</span>
+    <span class="hljs-comment">#     leftIndex += 1</span>
+
+    retList.extend(rightArray[rightIndex:])
+
+    <span class="hljs-comment"># while rightIndex &lt; rightLen:</span>
+    <span class="hljs-comment">#     retList.append(rightArray[rightIndex])</span>
+    <span class="hljs-comment">#     rightIndex += 1</span>
+    <span class="hljs-keyword">return</span> retList
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    <span class="hljs-comment"># 14,33,27,10,35,19,42,44</span>
+
+    retList = MergeSort([<span class="hljs-number">14</span>,<span class="hljs-number">33</span>,<span class="hljs-number">27</span>,<span class="hljs-number">10</span>,<span class="hljs-number">35</span>,<span class="hljs-number">19</span>,<span class="hljs-number">42</span>,<span class="hljs-number">44</span>])
+    print(retList)
+</code></pre>
+<hr>
+<h2 id="6&#x5FEB;&#x901F;&#x6392;&#x5E8F;">6.&#x5FEB;&#x901F;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-python"><span class="hljs-string">&quot;&quot;&quot;
+
+ &#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF1A;&#x662F;&#x76EE;&#x524D;&#x57FA;&#x4E8E;&#x6BD4;&#x8F83;&#x7684;&#x5185;&#x90E8;&#x6392;&#x5E8F;&#x4E2D;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x5F85;&#x6392;&#x5E8F;&#x7684;&#x5173;&#x952E;&#x5B57;&#x662F;&#x968F;&#x673A;&#x5206;&#x5E03;&#x65F6;&#xFF0C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#x7684;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x6700;&#x77ED;&#xFF1B;
+
+&#x901A;&#x8FC7;&#x4E00;&#x8D9F;&#x6392;&#x5E8F;&#x5C06;&#x8981;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5206;&#x5272;&#x6210;&#x72EC;&#x7ACB;&#x7684;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x6BD4;&#x53E6;&#x5916;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x8981;&#x5C0F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x6B64;&#x65B9;&#x6CD5;&#x5BF9;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#x6570;&#x636E;&#x5206;&#x522B;&#x8FDB;&#x884C;&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF0C;&#x6574;&#x4E2A;&#x6392;&#x5E8F;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x9012;&#x5F52;&#x8FDB;&#x884C;&#xFF0C;&#x4EE5;&#x6B64;&#x8FBE;&#x5230;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x53D8;&#x6210;&#x6709;&#x5E8F;&#x5E8F;&#x5217;
+&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(nlog&#x2082;n)
+&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(nlog&#x2082;n)
+&#x7A33;&#x5B9A;&#x6027;&#xFF1A;&#x4E0D;&#x7A33;&#x5B9A;
+
+&quot;&quot;&quot;</span>
+<span class="hljs-comment">#&#x5FEB;&#x6392;&#x7684;&#x4E3B;&#x51FD;&#x6570;&#xFF0C;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x4E3A;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5DE6;&#x53F3;&#x4E24;&#x7AEF;&#x7684;&#x4E0B;&#x6807;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">QuickSort</span><span class="hljs-params">(array,leftIndex=<span class="hljs-number">0</span>,rightIndex=None)</span>:</span>
+    <span class="hljs-comment">#&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</span>
+    arrayLen = len(array)
+    <span class="hljs-comment">#&#x957F;&#x5EA6;&#x4E3A;1 &#x7684;&#x8BDD; &#x6216;&#x8005; &#x7A7A; &#x7684;&#x8BDD; &#x76F4;&#x63A5;&#x8FD4;&#x56DE; &#x6570;&#x7EC4;</span>
+    <span class="hljs-keyword">if</span> arrayLen &lt;= <span class="hljs-number">1</span>:
+        <span class="hljs-keyword">return</span> array
+    <span class="hljs-comment">#&#x7A0B;&#x5E8F;&#x4E00;&#x5F00;&#x59CB; &#x5982;&#x679C;&#x6CA1;&#x6709;&#x7ED9;&#x4E00;&#x4E2A;&#x6700;&#x53F3;&#x8FB9;&#x7684;&#x7D22;&#x5F15;&#x503C;&#x5BFC;&#x5165;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x7ED9;&#x5B83; &#x8D4B;&#x503C;&#x4E00;&#x4E2A; &#x5C31;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x53F3;&#x8FB9;&#x7684; &#x90A3;&#x4E2A;&#x7D22;&#x5F15;&#x503C;&#x3002;</span>
+    <span class="hljs-keyword">if</span> rightIndex == <span class="hljs-keyword">None</span>:
+        rightIndex = arrayLen - <span class="hljs-number">1</span>
+    <span class="hljs-comment"># &#x4FDD;&#x62A4;&#x6761;&#x4EF6;&#xFF0C;&#x53EA;&#x6709;&#x6EE1;&#x8DB3;  &#x5DE6;&#x8FB9;&#x7D22;&#x5F15;&#x5C0F;&#x4E8E;&#x53F3;&#x8FB9;&#x7D22;&#x5F15;&#x7684;&#x65F6;&#x5019; &#x518D;&#x5F00;&#x59CB;&#x6392;&#x5E8F;</span>
+    <span class="hljs-keyword">if</span> leftIndex &lt; rightIndex:
+        <span class="hljs-comment">#&#x627E;&#x5230; &#x57FA;&#x51C6;&#x7684; &#x7D22;&#x5F15;&#x503C; &#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x901A;&#x8FC7;Partitions&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x53D6;k&#x4E0B;&#x6807;&#x503C;</span>
+        pivot = partition(array,leftIndex,rightIndex)
+        <span class="hljs-comment">#&#x9012;&#x5F52;&#x524D;&#x540E;&#x534A;&#x533A; &#x5BF9;&#x57FA;&#x51C6;&#x524D;&#x9762;&#x4E0D;&#x90E8;&#x5206;&#x7EE7;&#x7EED;&#x5FEB;&#x6392;</span>
+        QuickSort(array,leftIndex,pivot - <span class="hljs-number">1</span>)
+        <span class="hljs-comment">#&#x5BF9;&#x57FA;&#x51C6;&#x540E;&#x534A;&#x79EF;&#x5206;&#x7EE7;&#x7EED;&#x5FEB;&#x6392;</span>
+        QuickSort(array,pivot + <span class="hljs-number">1</span>,rightIndex)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">partition</span><span class="hljs-params">(array,leftIndex,rightIndex)</span>:</span>
+
+    pivotValue = array[rightIndex]
+    <span class="hljs-comment">#&#x5C06;&#x6700;&#x5DE6;&#x4FA7;&#x7684; &#x7D22;&#x5F15;&#x503C; &#x7ED9; i</span>
+    i  = leftIndex
+    <span class="hljs-comment">#&#x5C06;&#x6700;&#x53F3;&#x4FA7;&#x7684; &#x7D22;&#x5F15;&#x7684;&#x524D;&#x4E00;&#x4E2A; &#x7ED9;j</span>
+    j = rightIndex -<span class="hljs-number">1</span>
+    <span class="hljs-comment">#&#x5F53;left&#x4E0B;&#x6807;&#xFF0C;&#x5C0F;&#x4E8E;right&#x4E0B;&#x6807;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6B64;&#x65F6;&#x5224;&#x65AD;&#x4E8C;&#x8005;&#x79FB;&#x52A8;&#x662F;&#x5426;&#x76F8;&#x4EA4;&#xFF0C;&#x82E5;&#x672A;&#x76F8;&#x4EA4;&#xFF0C;&#x5219;&#x4E00;&#x76F4;&#x5FAA;&#x73AF;</span>
+    <span class="hljs-keyword">while</span> i &lt; j:
+        <span class="hljs-comment"># &#x5F53;left&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5927;&#x4E8E;&#x951A;&#x70B9; &#x57FA;&#x51C6;&#x70B9; &#x53C2;&#x8003;&#x503C;&#xFF0C;&#x5C31;&#x4E00;&#x76F4;&#x5411;&#x5DE6;&#x79FB;&#x52A8;</span>
+        <span class="hljs-keyword">while</span> j &gt; leftIndex <span class="hljs-keyword">and</span> array[j] &gt; pivotValue:
+            j -= <span class="hljs-number">1</span>
+        <span class="hljs-comment">#&#x5F53;left&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x5C0F;&#x4E8E;&#x57FA;&#x51C6;&#x70B9;&#x53C2;&#x8003;&#x503C;&#xFF0C;&#x5C31;&#x4E00;&#x76F4;&#x5411;&#x53F3;&#x79FB;&#x52A8;</span>
+        <span class="hljs-keyword">while</span> i &lt; rightIndex <span class="hljs-keyword">and</span> array[i] &lt;= pivotValue:
+            i += <span class="hljs-number">1</span>
+        <span class="hljs-comment">#&#x82E5;&#x79FB;&#x52A8;&#x5B8C;&#xFF0C;&#x4E8C;&#x8005;&#x4ECD;&#x672A;&#x76F8;&#x9047;&#x5219;&#x4EA4;&#x6362;&#x4E0B;&#x6807;&#x5BF9;&#x5E94;&#x7684;&#x503C;</span>
+        <span class="hljs-keyword">if</span> i &lt; j:
+            array[j],array[i] = array[i],array[j]
+            i+=<span class="hljs-number">1</span>
+            j-=<span class="hljs-number">1</span>
+    <span class="hljs-comment">#&#x82E5;&#x79FB;&#x52A8;&#x5B8C;&#xFF0C;&#x5DF2;&#x7ECF;&#x76F8;&#x9047;&#xFF0C;&#x5219;&#x4EA4;&#x6362;right&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x548C;&#x53C2;&#x8003;&#x503C;</span>
+    array[i],array[rightIndex] = array[rightIndex],array[i]
+    <span class="hljs-comment"># &#x8FD4;&#x56DE; &#x4E00;&#x4E2A; &#x7D22;&#x5F15;&#x503C;</span>
+    <span class="hljs-keyword">return</span> i
+
+<span class="hljs-comment"># &#x300A;&#x7B97;&#x6CD5;&#x5BFC;&#x8BBA;&#x300B;&#x4E2D;&#x7684;&#x5FEB;&#x6392;&#x7A0B;&#x5E8F;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">partition2</span><span class="hljs-params">(array,leftIndex,rightIndex)</span>:</span>
+    <span class="hljs-comment">#&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A; &#x5DE6;&#x8FB9;&#x7684;&#x6307;&#x9488;&#x4F4D;&#x7F6E; &#x4E3A; &#x5DE6;&#x4FA7;&#x7684; &#x524D;&#x4E00;&#x4E2A;</span>
+    i = leftIndex -<span class="hljs-number">1</span>
+    <span class="hljs-comment">#&#x904D;&#x5386; &#x9664; &#x57FA;&#x51C6;&#x6570;&#x4E4B;&#x5916;&#x7684; &#x6570;</span>
+    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(leftIndex,rightIndex):
+        <span class="hljs-comment">#&#x6BD4;&#x8F83; &#x904D;&#x5386;&#x7684;&#x6570; &#x548C; &#x57FA;&#x51C6;&#x6570; &#xFF0C;&#x82E5;&#x662F;&#x5C0F;&#x4E8E;&#x57FA;&#x51C6;&#x6570; &#x5219; &#x6362;&#x5230;&#x6570;&#x7EC4;&#x524D;&#x9762;&#x53BB;</span>
+        <span class="hljs-keyword">if</span> array[j] &lt; array[rightIndex]:
+            <span class="hljs-comment">#&#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x5C06;&#x904D;&#x5386;&#x7684;&#x6BD4; &#x57FA;&#x51C6;&#x6570;&#x5C0F;&#x7684;&#x6570; &#x653E;&#x5230; &#x6211;&#x4EEC;&#x6307;&#x9488; &#x7684; &#x540E;&#x4E00;&#x4E2A;&#x4E0A;&#xFF0C;&#x7136;&#x540E; &#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6307;&#x9488;&#x5411;&#x540E;&#x79FB;&#x4E00;&#x4F4D;&#x3002;&#x5F53;&#x904D;&#x5386;&#x7684;&#x6570;&#x5927;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x57FA;&#x51C6;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x79FB;&#x52A8;&#xFF0C;&#x800C;&#x4E14; &#x6307;&#x9488;&#x4E5F;&#x4E0D;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x90A3;&#x4E48; &#x5F53;&#x6211;&#x4EEC;&#x904D;&#x5386;&#x5B8C;&#x4E00;&#x5708;&#x4EE5;&#x540E;&#xFF0C;&#x628A; &#x6211;&#x4EEC;&#x7684;&#x57FA;&#x51C6;&#x6570; &#x653E;&#x5230; &#x7D22;&#x5F15;i &#x7684;&#x540E;&#x4E00;&#x4E2A; &#x4F4D;&#x7F6E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5F62;&#x6210;&#x4E86; &#x4E00;&#x4E2A; &#x57FA;&#x51C6;&#x6570; &#x5DE6;&#x8FB9;&#x90FD;&#x662F;&#x6BD4;&#x5B83;&#x5C0F;&#x7684;&#x6570;&#xFF0C;&#x57FA;&#x51C6;&#x6570;&#x53F3;&#x8FB9; &#x90FD;&#x662F;&#x6BD4;&#x5B83;&#x5927;&#x7684;&#x6570; &#x8FD9;&#x6837;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x7136;&#x540E;&#x8981;&#x628A; &#x7D22;&#x5F15; i &#x7684;&#x540E;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E; &#x4F5C;&#x4E3A;&#x57FA;&#x51C6;&#x6570; &#x4E0E; &#x539F;&#x57FA;&#x51C6;&#x6570; &#x4EA4;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FDB;&#x800C;&#x53EF;&#x4EE5;&#x7B2C;&#x4E8C;&#x6B21;&#x6765; &#x904D;&#x5386;&#x6BD4;&#x8F83;&#x3002;</span>
+            array[j],array[i+<span class="hljs-number">1</span>] = array[i+<span class="hljs-number">1</span>],array[j]
+            i += <span class="hljs-number">1</span>
+    <span class="hljs-comment">#&#x904D;&#x5386;&#x5B8C;&#x4E86;&#x4EE5;&#x540E;&#xFF0C;&#x5C06; left &#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x6570; &#x548C; &#x6700;&#x540E;&#x4E00;&#x4E2A; &#x6570;  &#x5373; right &#x4E0A;&#x7684;&#x6570;&#x4E92;&#x6362;&#x4F4D;&#x7F6E;&#xFF0C;&#x5C31; &#x91CD;&#x7F6E; &#x57FA;&#x51C6;&#x6570;&#x4E86;&#x3002;</span>
+    array[rightIndex],array[i+<span class="hljs-number">1</span>] = array[i+<span class="hljs-number">1</span>],array[rightIndex]
+    <span class="hljs-comment">#&#x8FD4;&#x56DE;&#x57FA;&#x51C6;&#x7684;&#x4E0B;&#x6807;</span>
+    <span class="hljs-keyword">return</span> i+<span class="hljs-number">1</span>
+
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    array = [<span class="hljs-number">14</span>,<span class="hljs-number">33</span>,<span class="hljs-number">27</span>,<span class="hljs-number">10</span>,<span class="hljs-number">35</span>,<span class="hljs-number">19</span>,<span class="hljs-number">42</span>,<span class="hljs-number">44</span>]
+    QuickSort(array)
+    print(array)
+</code></pre>
+<hr>
+<h2 id="&#x5404;&#x79CD;&#x6392;&#x5E8F;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x5BF9;&#x6BD4;&#xFF1A;">&#x5404;&#x79CD;&#x6392;&#x5E8F;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x5BF9;&#x6BD4;&#xFF1A;</h2>
+<p><img src="images/&#x6392;&#x5E8F;&#x590D;&#x6742;&#x5EA6;&#x6BD4;&#x8F83;.jpg" alt=""></p>
+<hr>
+<h2 id="&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;&#xFF1A;">&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x7684;&#x65F6;&#x95F4;&#xFF1A;</h2>
+<p><img src="images/&#x6392;&#x5E8F;.png" alt=""></p>
+<hr>
+<h2 id="&#x6392;&#x5E8F;&#x7684;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#xFF1A;">&#x6392;&#x5E8F;&#x7684;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#xFF1A;</h2>
+<p><img src="images/&#x5185;&#x5B58;&#x4F7F;&#x7528;.jpg" alt=""></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../树的实现/红黑树.html" class="navigation navigation-prev " aria-label="Previous page: 红黑树"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../六大排序/快速排序.html" class="navigation navigation-next " aria-label="Next page: 快速排序"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

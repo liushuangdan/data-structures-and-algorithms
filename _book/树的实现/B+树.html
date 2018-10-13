@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>B+树 | python 数据结构与算法</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../树的实现/红黑树.html" />
+    
+    
+    <link rel="prev" href="../树的实现/B-树.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.2"
+        data-chapter-title="B+树"
+        data-filepath="树的实现/B+树.md"
+        data-basepath=".."
+        data-revision="Fri Oct 12 2018 23:32:05 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        pythoon数据结构与算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> 剑指offer</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="剑指offer/补码.html">
+            
+                
+                    <a href="../剑指offer/补码.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        补码
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="剑指offer/剑指offer1-24题.html">
+            
+                
+                    <a href="../剑指offer/剑指offer1-24题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        剑指offer1-24题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="剑指offer/剑指offer25-43题.html">
+            
+                
+                    <a href="../剑指offer/剑指offer25-43题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        剑指offer25-43题
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="树的实现/树的定义.html">
+            
+                
+                    <a href="../树的实现/树的定义.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        各种树
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="树的实现/B-树.html">
+            
+                
+                    <a href="../树的实现/B-树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        B-树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="树的实现/B+树.html">
+            
+                
+                    <a href="../树的实现/B+树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        B+树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="树的实现/红黑树.html">
+            
+                
+                    <a href="../树的实现/红黑树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        红黑树
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> 六大排序</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="六大排序/六大基本排序.html">
+            
+                
+                    <a href="../六大排序/六大基本排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        六大基本排序
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="六大排序/快速排序.html">
+            
+                
+                    <a href="../六大排序/快速排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        快速排序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> 算法的介绍</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="算法的介绍/字典序算法.html">
+            
+                
+                    <a href="../算法的介绍/字典序算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        字典序算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="算法的介绍/布隆算法.html">
+            
+                
+                    <a href="../算法的介绍/布隆算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        布隆算法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >python 数据结构与算法</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="b-&#x6811;">B+ &#x6811;</h2>
+<p>B+ &#x6811; &#x662F;&#x57FA;&#x4E8E;B- &#x6811;&#x7684;&#x4E00;&#x79CD;&#x53D8;&#x4F53;&#xFF0C;&#x6709;&#x7740;&#x6BD4;B- &#x8F93;&#x66F4;&#x9AD8;&#x7684;&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#x3002;</p>
+<hr>
+<h3 id="&#x4E00;&#x4E2A;m&#x9636;&#x7684;b&#x6811;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x5F81;&#xFF1A;">&#x4E00;&#x4E2A;m&#x9636;&#x7684;B+&#x6811;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x7279;&#x5F81;&#xFF1A;</h3>
+<ol>
+<li><p>&#x6709;k&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x5305;&#x542B;&#x6709;k&#x4E2A;&#x5143;&#x7D20;&#xFF08;B&#x6811;&#x4E2D;&#x662F;k-1&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x7528;&#x6765;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5168;&#x90E8;&#x5143;&#x7D20;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53CA;&#x6307;&#x5411;&#x542B;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x8BB0;&#x5F55;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x4E14;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x672C;&#x8EAB;&#x4F9D;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5927;&#x5C0F;&#x81EA;&#x5C0F;&#x800C;&#x5927;&#x987A;&#x5E8F;&#x94FE;&#x63A5;&#x3002;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x90FD;&#x540C;&#x65F6;&#x5B58;&#x5728;&#x4E8E;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x5B50;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x4E2D;&#x662F;&#x6700;&#x5927;&#xFF08;&#x6216;&#x6700;&#x5C0F;&#xFF09;&#x5143;&#x7D20;&#x3002;</p>
+</li>
+</ol>
+<hr>
+<p><img src="images/B+&#x6811;1.png" alt="B+&#x6811;1"></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7236;&#x8282;&#x70B9;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x51FA;&#x73B0;&#x5728;&#x5B50;&#x8282;&#x70B9;&#x4E2D;&#xFF0C;&#x662F;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x6700;&#x5927;&#xFF08;&#x6216;&#x6700;&#x5C0F;&#xFF09;&#x5143;&#x7D20;&#x3002;</p>
+<p><img src="images/B+&#x6811;2.png" alt="B+&#x6811;1"></p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x8FD9;&#x68F5;&#x6811;&#x4E2D;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x5143;&#x7D20;8&#x662F;&#x81EA;&#x5DF1;&#x70B9;2,5&#xFF0C;8&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;&#xFF0C;&#x4E5F;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;6,8&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x6839;&#x8282;&#x70B9;&#x5143;&#x7D20;15 &#x662F;&#x5B50;&#x8282;&#x70B9;11,15&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;&#xFF0C;&#x4E5F;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;13,15&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;&#xFF08;&#x8FD9;&#x91CC;&#x662F;15&#xFF09;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7B49;&#x540C;&#x4E8E;&#x6574;&#x4E2A;B+&#x6811;&#x7684;&#x6700;&#x5927;&#x5143;&#x7D20;&#x3002;&#x4EE5;&#x540E;&#x65E0;&#x8BBA;&#x63D2;&#x5165;&#x5220;&#x9664;&#x591A;&#x5C11;&#x5143;&#x7D20;&#xFF0C;&#x59CB;&#x7EC8;&#x8981;&#x4FDD;&#x6301;&#x6700;&#x5927;&#x5143;&#x7D20;&#x5728;&#x6839;&#x8282;&#x70B9;&#x5F53;&#x4E2D;&#x3002;</p>
+<p>&#x81F3;&#x4E8E;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x7531;&#x4E8E;&#x7236;&#x8282;&#x70B9;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x51FA;&#x73B0;&#x5728;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x56E0;&#x6B64;&#x6240;&#x4EE5;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5305;&#x542B;&#x4E86;&#x5168;&#x91CF;&#x5143;&#x7D20;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5E76;&#x4E14;&#x6BCF;&#x4E00;&#x4E2A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x90FD;&#x5E26;&#x6709;&#x6307;&#x5411;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x94FE;&#x8868;&#x3002;</p>
+<p><img src="images/B+&#x6811;3.png" alt="B+&#x6811;1"></p>
+<p>B+ &#x6811;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x70B9;&#xFF0C;&#x8FD9;&#x4E2A;&#x7279;&#x70B9;&#x662F;&#x5728;&#x7D22;&#x5F15;&#x4E4B;&#x5916;&#xFF0C;&#x786E;&#x662F;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x7684;&#x7279;&#x70B9;&#x3002;&#x90A3;&#x5C31;&#x662F; [ &#x536B;&#x661F;&#x6570;&#x636E; ] &#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x6240;&#x8C13;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x7D22;&#x5F15;&#x5143;&#x7D20;&#x6240;&#x6307;&#x5411;&#x7684;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#xFF0C;&#x6BD4;&#x5982;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x67D0;&#x4E00;&#x884C;&#x3002;&#x5728;B- &#x6811;&#x4E2D;&#xFF0C;&#x65E0;&#x8BBA;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x8FD8;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x90FD;&#x5E26;&#x6709;&#x536B;&#x661F;&#x6570;&#x636E;&#x3002;</p>
+<hr>
+<h4 id="b&#x6811;&#x4E2D;&#x7684;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF08;satellite-information&#xFF09;&#xFF1A;">B-&#x6811;&#x4E2D;&#x7684;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF08;Satellite Information&#xFF09;&#xFF1A;</h4>
+<p><img src="images/B+&#x6811;4.png" alt="B+&#x6811;1"></p>
+<p>&#x800C;&#x5728;B+&#x6811;&#x5F53;&#x4E2D;&#xFF0C;&#x53EA;&#x6709;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5E26;&#x6709;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF0C;&#x5176;&#x4F59;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x4EC5;&#x4EC5;&#x662F;&#x7D22;&#x5F15;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x5173;&#x8054;&#x3002;</p>
+<hr>
+<h4 id="b&#x6811;&#x4E2D;&#x7684;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF08;satellite-information&#xFF09;&#xFF1A;">B+&#x6811;&#x4E2D;&#x7684;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF08;Satellite Information&#xFF09;&#xFF1A;</h4>
+<p><img src="images/B+&#x6811;5.png" alt="B+&#x6811;1"></p>
+<p>&#x9700;&#x8981;&#x8865;&#x5145;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x5E93;&#x7684;&#x805A;&#x96C6;&#x7D22;&#x5F15;&#xFF08;Clustered Index&#xFF09;&#x4E2D;&#xFF0C;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x76F4;&#x63A5;&#x5305;&#x542B;&#x536B;&#x661F;&#x6570;&#x636E;&#x3002;&#x5728;&#x975E;&#x805A;&#x96C6;&#x7D22;&#x5F15;&#xFF08;NonClustered Index&#xFF09;&#x4E2D;&#xFF0C;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5E26;&#x6709;&#x6307;&#x5411;&#x536B;&#x661F;&#x6570;&#x636E;&#x7684;&#x6307;&#x9488;&#x3002;</p>
+<hr>
+<h2 id="b-&#x6811;&#x8BBE;&#x8BA1;&#x6210;&#x8FD9;&#x6837;&#xFF0C;&#x7A76;&#x7ADF;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;&#xFF1F;">B+ &#x6811;&#x8BBE;&#x8BA1;&#x6210;&#x8FD9;&#x6837;&#xFF0C;&#x7A76;&#x7ADF;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;&#xFF1F;</h2>
+<p>B+&#x6811;&#x7684;&#x597D;&#x5904;&#x4E3B;&#x8981;&#x4F53;&#x73B0;&#x5728;&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#x4E0A;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5206;&#x522B;&#x901A;&#x8FC7;&#x5355;&#x884C;&#x67E5;&#x8BE2;&#x548C;&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#x6765;&#x505A;&#x5206;&#x6790;&#x3002;</p>
+<p>&#x5728;&#x5355;&#x5143;&#x7D20;&#x67E5;&#x8BE2;&#x7684;&#x65F6;&#x5019;&#xFF0C;B+&#x6811;&#x4F1A;&#x81EA;&#x9876;&#x5411;&#x4E0B;&#x9010;&#x5C42;&#x67E5;&#x627E;&#x8282;&#x70B9;&#xFF0C;&#x6700;&#x7EC8;&#x627E;&#x5230;&#x5339;&#x914D;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x67E5;&#x627E;&#x7684;&#x662F;&#x5143;&#x7D20;3</p>
+<p>&#x7B2C;&#x4E00;&#x6B21;&#x78C1;&#x76D8;IO&#xFF1A;
+<img src="images/B+&#x6811;6.png" alt="B+&#x6811;1">
+&#x7B2C;&#x4E8C;&#x6B21;&#x78C1;&#x76D8;IO&#xFF1A;
+<img src="images/B+&#x6811;7.png" alt="B+&#x6811;1">
+&#x7B2C;&#x4E09;&#x6B21;&#x78C1;&#x76D8;IO&#xFF1A;
+<img src="images/B+&#x6811;8.png" alt="B+&#x6811;1"></p>
+<hr>
+<p>&#x67E5;&#x8BE2;&#xFF1A;</p>
+<p>&#x9996;&#x5148;&#xFF0C;B+&#x6811;&#x7684;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x6CA1;&#x6709;&#x536B;&#x661F;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x540C;&#x6837;&#x5927;&#x5C0F;&#x7684;&#x78C1;&#x76D8;&#x9875;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x66F4;&#x591A;&#x7684;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x6570;&#x91CF;&#x76F8;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;B+&#x6811;&#x7684;&#x7ED3;&#x6784;&#x6BD4;B- &#x6811;&#x66F4;&#x52A0;&#x201C;&#x77EE;&#x80D6;&#x201D;&#xFF0C;&#x56E0;&#x6B64;&#x67E5;&#x8BE2;&#x65F6;IO&#x6B21;&#x6570;&#x4E5F;&#x66F4;&#x5C11;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;B+ &#x6811;&#x7684;&#x67E5;&#x8BE2;&#x5FC5;&#x987B;&#x6700;&#x7EC8;&#x67E5;&#x627E;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x800C;B-&#x6811;&#x53EA;&#x8981;&#x627E;&#x5230;&#x5339;&#x914D;&#x5143;&#x7D20;&#x5373;&#x53EF;&#xFF0C;&#x65E0;&#x8BBA;&#x5339;&#x914D;&#x5143;&#x7D20;&#x5904;&#x4E8E;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x8FD8;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;B- &#x6811;&#x7684;&#x67E5;&#x627E;&#x6027;&#x80FD;&#x5E76;&#x4E0D;&#x7A33;&#x5B9A;&#xFF08;&#x6700;&#x597D;&#x60C5;&#x51B5;&#x662F;&#x6307;&#x67E5;&#x6839;&#x8282;&#x70B9;&#xFF0C;&#x6700;&#x574F;&#x60C5;&#x51B5;&#x662F;&#x67E5;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF09;&#x3002;&#x800C;B+&#x6811;&#x7684;&#x6BCF;&#x4E00;&#x6B21;&#x67E5;&#x627E;&#x90FD;&#x662F;&#x7A33;&#x5B9A;&#x7684;&#x3002;</p>
+<hr>
+<p>B- &#x6811;&#x505A;&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#xFF0C;&#x4F9D;&#x9760;&#x7E41;&#x7410;&#x7684;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x67E5;&#x8BE2;&#x8303;&#x56F4;3&#x5230;11&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<h4 id="b&#x6811;&#x7684;&#x8303;&#x56F4;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#xFF1A;">B-&#x6811;&#x7684;&#x8303;&#x56F4;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#xFF1A;</h4>
+<p>&#x81EA;&#x9876;&#x5411;&#x4E0B;&#xFF0C;&#x67E5;&#x627E;&#x5230;&#x8303;&#x56F4;&#x7684;&#x4E0B;&#x9650;&#xFF08;3&#xFF09;&#xFF1A;</p>
+<p><img src="images/B+&#x6811;9.png" alt="B+&#x6811;1"></p>
+<p>&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5230;&#x5143;&#x7D20;6&#xFF1A;
+<img src="images/B+&#x6811;10.png" alt="B+&#x6811;1">
+&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5230;&#x5143;&#x7D20;8&#xFF1A;
+<img src="images/B+&#x6811;11.png" alt="B+&#x6811;1">
+&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5230;&#x5143;&#x7D20;9&#xFF1A;
+<img src="images/B+&#x6811;12.png" alt="B+&#x6811;1">
+&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x5230;&#x5143;&#x7D20;11&#xFF0C;&#x904D;&#x5386;&#x7ED3;&#x675F;&#xFF1A;
+<img src="images/B+&#x6811;13.png" alt="B+&#x6811;1"></p>
+<hr>
+<p>B+ &#x6811;&#x7684;&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#xFF0C;&#x5219;&#x8981;&#x7B80;&#x5355;&#x7684;&#x591A;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x94FE;&#x8868;&#x4E0A;&#x5DE6;&#x904D;&#x5386;&#x5373;&#x53EF;&#xFF1A;</p>
+<h4 id="b&#x6811;&#x7684;&#x8303;&#x56F4;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#xFF1A;">B+&#x6811;&#x7684;&#x8303;&#x56F4;&#x67E5;&#x627E;&#x8FC7;&#x7A0B;&#xFF1A;</h4>
+<p>&#x81EA;&#x9876;&#x5411;&#x4E0B;&#xFF0C;&#x67E5;&#x627E;&#x5230;&#x8303;&#x56F4;&#x7684;&#x4E0B;&#x9650;&#xFF08;3&#xFF09;&#xFF1A;
+<img src="images/B+&#x6811;14.png" alt="B+&#x6811;1">
+&#x901A;&#x8FC7;&#x94FE;&#x8868;&#x6307;&#x9488;&#xFF0C;&#x904D;&#x5386;&#x5230;&#x5143;&#x7D20;6, 8&#xFF1A;
+<img src="images/B+&#x6811;15.png" alt="B+&#x6811;1">
+&#x901A;&#x8FC7;&#x94FE;&#x8868;&#x6307;&#x9488;&#xFF0C;&#x904D;&#x5386;&#x5230;&#x5143;&#x7D20;9, 11&#xFF0C;&#x904D;&#x5386;&#x7ED3;&#x675F;&#xFF1A;
+<img src="images/B+&#x6811;16.png" alt="B+&#x6811;1"></p>
+<hr>
+<p>&#x7EFC;&#x5408;&#x8D77;&#x6765;&#xFF0C;B+ &#x6811;&#x76F8;&#x6BD4;B- &#x6811;&#x7684;&#x4F18;&#x52BF;&#x6709;&#x4E09;&#x4E2A;&#xFF1A;</p>
+<ol>
+<li>IO&#x6B21;&#x6570;&#x66F4;&#x5C11;&#xFF1B;</li>
+<li>&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#x7A33;&#x5B9A;&#xFF1B;</li>
+<li>&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#x7B80;&#x4FBF;&#x3002;</li>
+</ol>
+<p>&#x81F3;&#x4E8E;B+ &#x6811;&#x7684;&#x63D2;&#x5165;&#x548C;&#x5220;&#x9664;&#xFF0C;&#x8FC7;&#x7A0B;&#x4E0E;B- &#x6811;&#x5927;&#x540C;&#x5C0F;&#x5F02;&#x3002;&#x90A3;&#x4E48;&#x4EE5;B- &#x6811; &#x4E3A;&#x53C2;&#x8003;&#x3002;</p>
+<hr>
+<h1 id="&#x6700;&#x540E;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF1A;b-&#x6811;&#x7684;&#x7279;&#x5F81;&#x548C;&#x4F18;&#x52BF;&#xFF1A;">&#x6700;&#x540E;&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#xFF1A;B+ &#x6811;&#x7684;&#x7279;&#x5F81;&#x548C;&#x4F18;&#x52BF;&#xFF1A;</h1>
+<h2 id="b&#x6811;&#x7684;&#x7279;&#x5F81;&#xFF1A;">B+&#x6811;&#x7684;&#x7279;&#x5F81;&#xFF1A;</h2>
+<ol>
+<li><p>&#x6709;k&#x4E2A;&#x5B50;&#x6811;&#x7684;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x5305;&#x542B;&#x6709;k&#x4E2A;&#x5143;&#x7D20;&#xFF08;B&#x6811;&#x4E2D;&#x662F;k-1&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E0D;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x7528;&#x6765;&#x7D22;&#x5F15;&#xFF0C;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x4FDD;&#x5B58;&#x5728;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x3002;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5168;&#x90E8;&#x5143;&#x7D20;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53CA;&#x6307;&#x5411;&#x542B;&#x8FD9;&#x4E9B;&#x5143;&#x7D20;&#x8BB0;&#x5F55;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x4E14;&#x53F6;&#x5B50;&#x7ED3;&#x70B9;&#x672C;&#x8EAB;&#x4F9D;&#x5173;&#x952E;&#x5B57;&#x7684;&#x5927;&#x5C0F;&#x81EA;&#x5C0F;&#x800C;&#x5927;&#x987A;&#x5E8F;&#x94FE;&#x63A5;&#x3002;</p>
+</li>
+<li><p>&#x6240;&#x6709;&#x7684;&#x4E2D;&#x95F4;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x90FD;&#x540C;&#x65F6;&#x5B58;&#x5728;&#x4E8E;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x5B50;&#x8282;&#x70B9;&#x5143;&#x7D20;&#x4E2D;&#x662F;&#x6700;&#x5927;&#xFF08;&#x6216;&#x6700;&#x5C0F;&#xFF09;&#x5143;&#x7D20;&#x3002;</p>
+</li>
+</ol>
+<hr>
+<h2 id="b&#x6811;&#x7684;&#x4F18;&#x52BF;&#xFF1A;">B+&#x6811;&#x7684;&#x4F18;&#x52BF;&#xFF1A;</h2>
+<ol>
+<li>&#x5355;&#x4E00;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x66F4;&#x591A;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F7F;&#x5F97;&#x67E5;&#x8BE2;&#x7684;IO&#x6B21;&#x6570;&#x66F4;&#x5C11;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x67E5;&#x8BE2;&#x90FD;&#x8981;&#x67E5;&#x627E;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x67E5;&#x8BE2;&#x6027;&#x80FD;&#x7A33;&#x5B9A;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5F62;&#x6210;&#x6709;&#x5E8F;&#x94FE;&#x8868;&#xFF0C;&#x4FBF;&#x4E8E;&#x8303;&#x56F4;&#x67E5;&#x8BE2;&#x3002;</li>
+</ol>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../树的实现/B-树.html" class="navigation navigation-prev " aria-label="Previous page: B-树"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../树的实现/红黑树.html" class="navigation navigation-next " aria-label="Next page: 红黑树"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
